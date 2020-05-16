@@ -157,6 +157,9 @@
    padding:5vw;
    background-color: rgba(24,201,243,0.3);
    border-color: rgba(255,255,255,0.7);
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
 
  }
  .container:nth-child(even){background-color: rgba(243,201,120,0.5)}
