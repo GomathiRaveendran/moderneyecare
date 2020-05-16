@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Appointment Registeration</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <<link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <!-- HEADER STARTS -->
+    <div id="header">
+      <div id="dispdate">displays time and menu</div>
+      <div id="name">
+      <i class="fa fa-eye" aria-hidden="true"></i>
+      <h1>Modern EyeCare</h1>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="">Services</a>
+        <a href="registeration.html" class="active">Appointment</a>
+        <a href="">About Us</a>
+        <a href="">Reviews</a>
+        <a href="">Our Team</a>
+        <a href="">Locations</a>
+        <a href="donation.html">Eye Donation</a>
+      </nav>
+  <marquee><a href="">Eye Care during lockdown - A guide </a></marquee>
+    </div>
+    <!-- ............ -->
+    <div class="content">
+      <h1 id="blurry">
+        Blurry?
+      </h1>
+      <br><br><br>
+      <h6 style="text-align:right;"> ...Book an Appointment with some of the best ophthalmologists</h6>
+      <div class="appform">
+      <form name="register">
+        <fieldset>
+          <legend id="legend">Patient Information:</legend>
+          <label for="fname">First name:<br>     </label>
+          <input type="text" id="fname" name="fname" required><br><br>
+          <label for="lname">Last name:<br>      </label>
+          <input type="text" id="lname" name="lname"><br><br>
+          <label for="email" required>Email:<br>          </label>
+          <input type="email" id="email" name="email"><br><br>
+          <label for="birthday" required>Phone Number:<br></label>
+          <input type="number" id="phno" name="phoneno"><br><br>
+          <input id="sub" type="submit" value="Register" name="submit" onclick="checkem()">
+
+         </fieldset>
+      </form>
+      </div>
+      <div class="error">
+        <fieldset>
+          <legend>Error</legend>
+          <p id="error">Oops, check the ...</p>
+        </fieldset>
+      </div>
+    </div>
+    <div class="media">
+        <i class="fa fa-instagram" aria-hidden="true"></i>
+        <i class="fa fa-facebook-official" aria-hidden="true"></i>
+        <i class="fa fa-twitter-square" aria-hidden="true"></i>
+        <i class="fa fa-rss-square" aria-hidden="true"></i>
+        <i class="fa fa-whatsapp" aria-hidden="true"></i>
+        <i class="fa fa-reddit-square" aria-hidden="true"></i>
+    </div>
+
+    <script type="text/javascript" src="script/common.js">
+
+    </script>
+
+    <script>
+    function checkem()
+    {
+      var letters = /^[A-Za-z]+$/;
+      var x=document.getElementById('fname').value;
+      if(x.match(letters))
+      {
+        document.getElementById('error').style.color="rgb(0,0,255)";
+        document.getElementById('legend').style.color="rgb(0,0,255)";
+        document.getElementById('error').style.innerHTML="Your application has been sent succcessfully!";
+        document.getElementById('legend').style.innerHTML="Success";
+        console.log('Success');
+        return true;
+      }
+
+      else{
+        document.getElementById('error').style.innerHTML="Please input alphabet characters only in the name sections";
+        console.log('im in');
+      }
+    }
+    </script>
+
+
+  </body>
+</html>
