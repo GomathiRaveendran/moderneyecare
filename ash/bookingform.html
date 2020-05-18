@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>bookings.outstationservices</title>
+		
+		<link rel="stylesheet" type = "text/css" href="main.css" />
+		<style>
+			form{
+				color: rgb(53, 52, 52);
+			}
+		</style>
+		
+	</head>
+	<body class="is-preload">
+
+	
+			<div id="page-wrapper">
+					<article id="main">
+						<header style="background-color:rgba(68, 59, 59, 0.774) ;">
+							<h2 style ="text-align: center;color: white;font-family: Georgia, 'Times New Roman', Times, serif;font-style: oblique;">PLACE YOUR ORDER</h2>
+							<p style ="text-align: center;color: white;">We care for your health</p>
+						</header>
+						<section class="wrapper style5" >
+							<div class="inner">
+								<div id = "form">
+									<h3>ENTER YOUR NAME :</h3> 
+								    <input type="text" id="pickup" style="background-color: rgba(68, 59, 59, 0.774);color: white;font-family: Verdana, Geneva, Tahoma, sans-serif;" width="50px">&nbsp;
+								    <h3>Please ENTER ADDRESS TO DELIVER THE PRODUCT </h3>
+								    <input type="text" id="drop" style="background-color: rgba(68, 59, 59, 0.774);color: white;font-family: Verdana, Geneva, Tahoma, sans-serif;"width="50px" height="20px" >&nbsp;
+								    <h3>QUANTITY :</h3>
+								    <input type="number" id="time" style="width:25%;padding:5px;background-color: rgba(68, 59, 59, 0.774);color: white;font-family: Verdana, Geneva, Tahoma, sans-serif;" >&nbsp;
+								    <br>
+								    <br>
+
+								    <center><button type="button" onclick="myfunction()" style="background-color:rgba(68, 59, 59, 0.774);color:black;font-family: Verdana, Geneva, Tahoma, sans-serif; width: 60%;border: 1px solid rgba(68, 59, 59, 0.774) ;border-radius: 3px;">place order</button></center>
+							    </div> 
+							  		
+							</div>
+						</section>
+					</article>
+
+				
+					<footer id="footer">
+						<ul class="copyright">
+							<li>&copy; ASHISH</li>
+						</ul>
+					</footer>
+
+			</div>
+		</body>
+	
+	<body>
+		<script>
+			function myfunction(){
+
+				var pick = document.getElementById("pickup").value;
+				var drop = document.getElementById("drop").value;
+				var time = document.getElementById("time").value;
+
+				if (pick == "" || time == "" || drop == ""){
+
+					if (pick == "" && time == "" && drop == ""){
+						document.getElementById("form").innerHTML="<h3>OOPS!!.We are Sorry." + "<br>"+ "Please fill everything to continue Further.</h3>";
+					}
+
+					else if (pick == "" && time == "" ){
+						document.getElementById("form").innerHTML="<h3>We are Sorry.<br>Please enter your name and quantity time to continue Further.</h3>";
+					}
+					else if(pick == "" && drop == ""){
+						document.getElementById("form").innerHTML="<h3>We are Sorry.<br>Please enter your name and address to continue Further.</h3>";
+					}
+					else if (drop == "" && time == ""){
+						document.getElementById("form").innerHTML="<h3>We are Sorry.<br>Please enter address and quantity to continue Further.</h3>";
+					}
+
+					else if(pick == ""){
+						document.getElementById("form").innerHTML="<h3>We are Sorry.<br>Please enter name to continue Further.</h3>";
+					}
+					else if(time == ""){
+						document.getElementById("form").innerHTML="<h3>We are Sorry.<br>Please enter the quantity to continue Further.</h3>";
+					}
+					else{
+						document.getElementById("form").innerHTML="<h3>We are Sorry.<br>Please enter the address to continue Further.</h3>";
+					}
+				}
+				else{
+					document.getElementById("form").innerHTML="<h3>Hello  the order you placed of quantity "+time+"will be delivered to your given address "+drop+".</h3>" + "<br>" + "<h3>Thanks for being With Us.</h3>"
+				}
+  
+            }
+
+		</script>
+	</body>	
+</html>
