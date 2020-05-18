@@ -44,6 +44,12 @@
         x=document.getElementById('desg4');
         x.innerHTML=ttl;
       }
+      
+      function design5(ttl)
+      {
+        x=document.getElementById('desg5');
+        x.innerHTML=ttl;
+      }
 
       function dat()
       {
