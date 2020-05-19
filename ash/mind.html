@@ -283,7 +283,14 @@
                     <input type="submit" value="Submit">
                    </form>
                 </center>
-          
+           <div id="dispdate"></div>
+           <script>
+                             function dat()
+      {
+         document.getElementById("dispdate").innerHTML="Current date and time: "+d.getHours()+":"+d.getMinutes()+", "+d.getDate()+"/"+(d.getMonth()+1)+"/"+d.getFullYear();
+      }
+      dat();
+      </script>
     </body>
    
 </html>
