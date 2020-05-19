@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="layoutcss.css">
+        <style>
+            * {
+                 box-sizing: border-box;    /*same border for all elements */
+            }
+            .top {
+                padding: 70px;
+                background-color: burlywood;
+                font-size: 45px;
+            }
+            .containr {                 /*all form elements container*/
+                background-color: #f2f2f2;
+                padding: 20px;
+            }
+            input[type=text],input[type=email], select, textarea {         /*group selector*/   
+                width: 100%;
+                padding: 12px;                          
+                border: 1px solid black;          
+                border-radius: 7px;
+            }
+            label {                                  
+                padding: 12px 12px 12px 0; 
+                display: inline-block;     /*it take as much width needed doesnot start on a new line */
+                font-size: 20px;
+                text-transform: capitalize;       
+            }
+
+            input[type=button] {
+                background-color: #4CAF50;
+                color: white;
+                width: 100%;
+                padding: 12px 20px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                float: right;
+            }
+            input[type=button]:hover {
+                background-color: #45a049;
+            }
+            .col{
+                width: 75%;
+                margin-top: 5px;
+            }
+            .clearfix {
+               overflow: auto;         
+            }
+        </style>
+        
+    </head>
+    <header>
+        <div class="header">
+            <h4 style="margin-left: 980px; cursor: pointer;">Helpline-No +91-11223344<span>email:mordern@gmail.com</span></h4>
+        </div>
+        <div class="sub-header">
+            <h1>Modern Eye Care</h1>
+        </div>
+
+        <div class="topnav">
+            <a href="my hsptl.html">home</a>
+            <a href="directors.html">directors</a>
+            <a href="review.html">review</a>
+        </div>
+        <div style="border: 1px solid black; text-transform: capitalize; background-color:cyan;">
+            <marquee>
+                <strong> DUE TO THE COVID-19 PANDEMIC LOCKDOWN WE ARE CLOSED TILL 03 MAY2020, HOWEVER EMERGENCY SERVICES WILL CONTINUE</strong>
+            </marquee>
+        <div>
+   </header>
+    <body>
+        <div class="top">
+            Tell us what u think!!
+        </div>
+        <div class="containr">
+            <form>
+              <div class="row">
+                  <div class="col">
+                      <label for="name">name:</label>
+                  </div>
+                  <div class="col">
+                      <input type="text" id="name" placeholder="ENTER NAME" required>
+                  </div>
+              </div>  
+                  <div class="row">
+                       <div class="col">
+                           <label for="email">email:</label>
+                       </div>
+                       <div class="col">
+                           <input type="email" id="email" name="email" placeholder="ENTER EMAIL" required>
+                       </div>
+                  </div>
+                  <div class="row">
+                      <div class="col">
+                          <label for="country">country:</label>
+                      </div>
+                      <div class="col">
+                          <select id="country" name="country">         <!--used to let a user select more options-->
+                              <option value="india">india</option>
+                              <option value="usa">usa</option>
+                              <option value="india">india</option>
+                              <option value="usa">usa</option>
+                          </select>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col">
+                           <label for="subject">subject:</label>
+                      </div>
+                      <div class="col">
+                          <input type="text" id="suject" name="subject" placeholder="ENTER SUBJECT">
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col">
+                          <label for="comment">comment:</label>
+                      </div>
+                      <div class="col">
+                          <textarea id="comment" name="comment" placeholder="ENTER YOUR COMMENT" style="height: 200px;"></textarea>  <!--for a free unlimited text-->
+                      </div>
+                  </div><br>
+                  <div class="row">
+                      <div class="col">
+                        <input type="button" value="Send a Message" style="font-weight: bolder; font-size: 20px;">
+                      </div>
+                  </div>
+            </form><br><br><br>
+        </div>
+    </body>
+    <br><br><br>
+    <footer>
+        <div class="footer">
+            <div class="column">
+                <h1>about</h1>
+                <ul>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">Doctors</a></li>
+                    <li><a href="#">Eye Conditions</a></li>
+                    <li><a href="#">Eye Care Services</a></li>
+                    <li><a href="#">Events & Media</a></li>
+                    <li><a href="#">Academics & Research</a></li>
+                    <li><a href="#">Empanelments</a></li>
+                    <li><a href="#">International Patients</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="column">
+              <p style="color: rgb(14, 15, 15);">hdhd</p>
+            </div>
+            <div class="column">
+                <h1>services</h1>
+                <ul>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">about</a></li>
+                </ul>
+            </div>
+            <div style="text-align: right;">
+                <p id="demo" style="color: orange;"></p>
+            </div>
+        </div>    
+
+        <div class="relative">
+            <div class="absolute"  style="left: 45px;">
+                Copyright © 2017 ICARE Eye Hospital & Postgraduate Institute
+            </div>
+            <div class="absolute" style= "right: 25px;">
+                Designed And Develop By pvt.ltd
+            </div> 
+        </div>
+        <script>
+            var d = new Date();
+            document.getElementById("demo").innerHTML = d;
+        </script>
+   </footer>    
+</html>

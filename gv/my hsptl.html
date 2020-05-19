@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <link rel="stylesheet" type="text/css" href="layoutcss.css">  <!--for a common layout-->
+       <style>   /* for inside body tag */
+        html {
+	        box-sizing: border-box; /*includes padding nd border */
+        }
+
+        h1{
+            font-size: 46px;
+            font-weight: bold;
+        }
+
+        body{
+            color: #404040;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+        }
+
+        .cls1 {
+            height: 120px;
+            width: 100%;
+            background-color: lavender;
+        }
+
+        table{
+            width: 100%;
+            height: 60px;
+        }
+
+        p{
+            line-height: 1.8;
+        }
+
+        #cls2{
+            padding-left: 80px;
+        }
+    </style>
+    </head>
+    <header>
+        <div class="header">
+            <h4 style="margin-left: 980px; cursor: pointer;">Helpline-No +91-11223344 <span>email:mordern@gmail.com</span></h4>
+        </div>
+        <div class="sub-header">
+            <h1>Modern Eye Care</h1>
+        </div>
+
+        <div class="topnav">
+            <a href="my hsptl.html">home</a>
+            <a href="directors.html">directors</a>
+            <a href="review.html">review</a>
+        </div>
+        <div style="border: 1px solid black; text-transform: capitalize; background-color:cyan;">
+            <marquee>
+                <strong> DUE TO THE COVID-19 PANDEMIC LOCKDOWN WE ARE CLOSED TILL 03 MAY2020, HOWEVER EMERGENCY SERVICES WILL CONTINUE</strong>
+            </marquee>
+        <div>
+   </header>
+   <body>
+        <div class="container">
+            <img src="about-banner.jpg" style="width: 100%;"/>
+            <div class="text">
+                <h1>
+                    Mission, Vision & Values
+                </h1>
+            </div>
+        </div>
+
+        <br><br><br>
+
+        <div id="cls2">
+            <bold style="font-size: 45px;">Helping Hands Towards Preventing Blindness</bold>
+            <br>
+            <p style="letter-spacing: 0.4em;">Ophthalmic Services Of International Standards </p>
+
+                <table class="table">   <!--table for 3 coulmns-->
+                    <tbody style="word-spacing: 0.3em;">
+                        <td><br><img src="m1-380x178.jpg"><br><br><br><h1>Vision</h1><p>To excel in cutting edge technology in eye care, education<br> & research in ophthalmology.</p></td>
+                        <td><br><br><img src="value.jpg"><br><br><br><h1>Mission</h1><p>ICARE is committed to provide comprehensive quality<br> ophthalmicserv ices of International Standards to all<br> sections of society at an affordable cost.</p></td>
+                        <td><img src="mission1.jpg"><br><br><h1>Values</h1><p>To deliver quality, ethical, medical and surgical eye care services.</p></td>
+                    </tbody>
+                </table>
+
+                <h1>Quality Policy & Objectives</h1>
+                    <ol style="font-size: 20px; font-style: italic;">
+                        <li>To comply with all statutory & regulatory requirements</li><br>
+                        <li>To adhere to operational protocols in order to reduce errors & enhance patient safety</li><br>
+                        <li>To provide quality of care that exceeds the patients expectations</li><br>
+                        <li>To ensure health & safety of the staff member</li><br>
+                        <li>To promote on the job training to improve skills & competence of the staff</li>
+                    </ol>
+        </div>
+   </body>
+
+   <br><br><br>
+
+   <footer>
+        <div class="footer">
+            <div class="column">
+                <h1>about</h1>
+                <ul>
+                    <li><a href="../index.html">home</a></li>
+                    <li><a href="my hspt.html">about us</a></li>
+                    <li><a href="#">Doctors</a></li>
+                    <li><a href="#">Eye Care Services</a></li>
+                    <li><a href="#">Events & Media</a></li>
+                    <li><a href="#">Academics & Research</a></li>
+                    <li><a href="#">Empanelments</a></li>
+                    <li><a href="#">International Patients</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="column">
+              <p style="color: rgb(14, 15, 15);">hdhd</p>
+            </div>
+            <div class="column">
+                <h1>services</h1>
+                <ul>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">about</a></li>
+                </ul>
+            </div>
+            <div style="text-align: right;">
+                <p id="demo" style="color: orange;"></p>
+            </div>
+        </div>
+
+        <div class="relative">
+            <div class="absolute"  style="left: 45px;">
+                Copyright © 2017 ICARE Eye Hospital & Postgraduate Institute
+            </div>
+            <div class="absolute" style= "right: 25px;">
+                Designed And Develop By pvt.ltd
+            </div>
+        </div>
+        <script>
+            var d = new Date();
+            document.getElementById("demo").innerHTML = d;
+        </script>
+   </footer>
+</html>
