@@ -1,0 +1,35 @@
+
+body{
+  background-color: black;
+    }
+ 
+  a{
+     color: darkorange;
+     font-family: 'Times New Roman', Times, serif;
+     font-size: 25px;
+   
+     }
+   p{
+      color: rgb(3, 58, 15);
+      font-family: 'Times New Roman', Times, serif;
+     font-size: 25px;
+
+    }
+    g{
+     color:blue;
+      font-family: 'Times New Roman', Times, serif;
+     font-size: 25px;
+
+    }
+   h1{
+      color: red;
+      text-align: center;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 25px;
+    }
+    b{
+        color: darkmagenta;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 25px;
+
+    }
