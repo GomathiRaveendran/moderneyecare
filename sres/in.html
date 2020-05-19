@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html >
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  * {box-sizing: border-box;}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #e9e9e9;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #2196F3;
+  color: white;
+}
+
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  border: none;
+  font-size: 17px;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav input[type=text] {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+  
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: black;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: white;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+.left{
+    position:relative;
+    left:25px;
+    bottom:325px;
+    font-size: xx-large;
+}
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 50px;
+}
+.column1 {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.container {
+  position: relative;
+  text-align: center;
+  color:black;
+}
+.top-left {
+  position: absolute;
+  bottom: 200px;
+  left: 160px;
+  font-size: x-large;
+}
+
+
+.footer
+{
+  display: block;
+  color: white;
+  font-size: 1vw;
+  padding:30px 64px 64px 64px;
+  margin-bottom: 10px;
+  background-color: black;
+  height:220px;
+  margin-top: 25vh;
+}
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+
+
+</style>
+</head>
+<body>
+  <div style="background-color:rgb(111, 201, 243) ; font-size:100px; text-align:center ; height: 150px; font-family: sans-serif;"><p>Modern <i class="fa fa-eye" style="font-size:100px;"></i>  care </p>
+    <img src="logo.jpg" style="width=50;height: 50;">
+  
+  </div>
+<div class="topnav">
+  <a  href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+   <a href="#donation">Donation</a>     
+    
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="doctor 1.jpg" style="width:100%">
+  <div class="text">DOCTORS</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="eye.jpg" style="width:50%",align="center">
+  <div class="text">EYE </div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="doctor 2.jpg" style="width:100%">
+  <div class="text"></div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+    <div class="container">
+      <img src="icare founder.jpg" style="width:95% height:%">
+      <div class="top-left">Dr.Sushil Choudhry</br> Founder of MODERN EYE Hospital </br> Managing Trustee Ishwar Charitable Trust</div>
+</div>
+<div class="row">
+  <div class="column">
+    <img src="1.jpg"style="width:100%;align:center">
+  <span style="font-size: large;"> Dr. Saurabh Choudhry (CEO)</span><br>
+Specialist:        Director Cataract and Refractive Services<br>
+Qualification:     MD, DO, DNB,SRTF (Sankara Nethralaya), FERC<br>
+E-Mail:            drsaurabh@icarehospital.org 
+   
+  </div>     
+  <div class="column">
+    <img src="2.jpg"style="width:100%;align:center">
+    Dr. Reena Choudhry (COO)<br>
+Specialist:         Director Glaucoma services, Senior Consultant Cataract and Glaucoma<br>
+Qualification:      MD, DOMS, DNB, FRCS (Glasgow), SRTF (Sankara Nethralaya), FERC<br>
+E-Mail:             drreena@icarehospital.org  
+  </div>
+  <div class="row">
+    <div class="column1">
+      <img src="3.jpg" style="width:100%">
+      Dr. Charu Tandon<br>
+Specialist:      Senior Consultant, Cataract and Anterior segment services<br>
+Qualification:   MBBS MS<br>
+E-Mail:          drcharu@icarehospital.org
+     
+    </div>
+    <div class="column1">
+      <img src="4.jpg" style="width:100%">
+      Dr. Shahana Mazumdar<br>
+Specialist:Senior Consultant Vitreo Retina and Uvea<br>
+Qualification:MBBS, MS (Ophtha) DNB, VR Fellowship<br>
+E-Mail:drshahana@icarehospital.org
+    </div>
+    <div class="column1">
+      <img src="5.jpg"style="width:100%">
+      Dr.-Uma
+Dr. Uma Sridhar<br>
+Specialist:Senior Consultant, Cornea and Cataract Services<br>
+Qualification:MS, DNB, FRCS (Ed) MNAMS, Fellowship Cornea and Anterior Segment – LV Prasad Eye Institute, Hyderabad<br>
+E-Mail:druma@icarehospital.org
+    </div>
+  </div>
+  <div class="row">
+    <div class="column1">
+      <img src="6.jpg"  style="width:100%">
+Dr. Shalini Sharma<br>
+Specialist:Senior Consultant, Cataract and Refractive Services<br>
+Qualification:MBBS M.S<br>
+E-Mail:drshalini@icarehospital.org
+     
+    </div>
+    <div class="column1">
+      <img src="7.jpg"  style="width:100%">
+      Dr. Geetha Srinivasan<br>
+Specialist:Senior Consultant, Pediatric Ophthalmology and Strabismus<br>
+Qualification:MBBS, MS, DNB<br>
+E-Mail:drgeetha@icarehospital.org
+    </div>
+    <div class="column1">
+      <img src="8.jpg"  style="width:100%">
+      Dr. Renu Grover<br>
+Specialist:Senior Consultant, Paediatric Ophthalmology and Strabismus<br>
+Qualification:MS Ophthalmology, Fellow ESA(Strabismus), Fellow ICO (Paediatric Ophthalmology)<br>
+E-Mail:drrenugrover@icarehospital.org
+    </div>
+  </div>
+  <div class="row">
+    <div class="column1">
+      <img src="9.jpg"style="width:100%">
+      Dr. Puneet Gupta<br>
+Specialist:Senior Consultant, Cataract and Anterior Segment Services<br>
+Qualification:MBBS, DOMS, DNB<br>
+E-Mail:drpuneet@icarehospital.org
+     
+    </div>
+    <div class="column1">
+      <img src="10.jpg"style="width:100%">
+      Dr. Rita Hansaria<br>
+Specialist:Senior Consultant, Cataract, Glaucoma & Anterior Segment<br>
+Qualification:MBBS, DOMS, DNB<br>
+E-Mail:drrita@icarehospital.org
+    </div>
+    <div class="column1">
+      <img src="11.jpg"style="width:100%">
+      Dr. Jyoti Batra<br>
+Specialist:Consultant, Cataract and Cornea<br>
+Qualification:MBBS, MS (Opthal), DNB Fellowship in cornea and Microsurgery (AEH)<br>
+E-Mail:drjyoti@icarehospital.org
+    </div>
+  </div>
+  <div class="row">
+    <div class="column1">
+      <img src="12.jpg" style="width:100%">
+      Dr. Vinayak Bhatia<br>
+Specialist:Glaucoma and Anterior Segment Services<br>
+Qualification:MBBS, MS, DNB, PGDMLE<br>
+E-Mail:drvinayak@icarehospital.org
+     
+    </div>
+    <div class="column1">
+      <img src="13.jpg" style="width:100%">
+      Dr. Jyoti Batra Ohri<br>
+      Specialist:Consultant Oculoplasty and Ocular Oncology<br>
+      Qualification:MBBS,MD,FLVEI (OCULOPLASTY),DNB, FAICO<br>
+      E-Mail:drjyotiohri@icarehospital.org
+    </div>
+    <div class="column1">
+      <img src="14.jpg"  style="width:100%">
+      Dr. Isha Vatsal<br>
+Specialist:Consultant, Cataract, Glaucoma And Anterior Segment<br>
+Qualification:MBBS, MS, Fellowship in Glaucoma and Anterior Segment (AEH)<br>
+E-Mail:drishavatsal@icarehospital.org
+
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="column1">
+    <img src="15.jpg" style="width:100%">
+    Dr. Metu Rajput<br>
+Specialist:Consultant, Cataract & Refractive Services<br>
+Qualification:MBBS (KGMU, Lucknow), DNB (ICARE Eye Hospital, Noida), Fellowship in Cataract & Refractive Surgery<br>
+E-Mail:drmeetu@icarehospital.org
+   
+  </div>
+  <div class="column1">
+    <img src="16.jpg" style="width:100%">
+    Dr. Hafsa Bashir<br>
+Specialist:Consultant, Cataract and Cornea Services<br>
+Qualification:MBBS, MS.<br>
+E-Mail:drhafsa@icarehospital.org
+  </div>
+  <div class="column1">
+    <img src="17.jpg"  style="width:100%">
+    Dr. Dushyant Kumar Sharma<br>
+Specialist:Consultant, Cataract, Anterior Segment and Glaucoma.<br>
+Qualification:MBBS, MS (Ophth; India)<br>
+E-Mail:drdushyant@icarehospital.org
+  </div>
+</div>
+<div class="row">
+  <div class="column1">
+    <img src="18.jpg" style="width:100%">
+    Dr. Prashant Jain<br>
+    Specialist:Vitreo Retina & Uvea<br>
+    Qualification:MBBS, DNB, FELLOWSHIP IN VR<br>
+    E-Mail:drprashant@icarehospital.org
+  </div>
+  <div class="column1">
+    <img src="16.jpg" style="width:100%">
+    Dr. Divya Jyoti<br>
+Specialist:General Ophthalmology<br>
+Qualification:MBBS, MS, FELLOWSHIP IN CATARACT & MICRO SURGERY<br>
+E-Mail:drdivya@icarehospital.org
+  </div>
+  <div class="column1">
+    <img src="20.jpg"  style="width:100%">
+    Dr. Foram Desai<br>
+Specialist:Anterior Segment & Glaucoma<br>
+Qualification:MBBS , MS , FMRF ( Sankara Nethralya ) FAICO.<br>
+E-Mail:drforam@icarehospital.org
+  </div>
+</div>
+<div class="row">
+  <div class="column1">
+    <img src="21.jpg" style="width:100%">
+    Dr. Priyanka Khandelwal<br>
+Specialist:Consultant, Vitreo Retina and Uvea surgery<br>
+Qualification:MBBS, DNB (Opthalmology), FVRS (Fellowship of Vitreo Retinal Surgery)<br>
+E-Mail:drpriyanka@icarehospital.org
+    
+  </div>
+</div>
+<button class="open-button" onclick="openForm()">Chat</button>
+
+<div class="chat-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Chat</h1>
+
+    <label for="msg"><b>Message</b></label>
+    <textarea placeholder="Type message.." name="msg" required></textarea>
+
+    <button type="submit" class="btn">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+<div class="footer">
+  Team Four: <br>
+  CB.EN.U4CSE19016- Tarun - Services <br>
+  CB.EN.U4CSE19017- Gomathi - Home, Appointment, Donation <br>
+  CB.EN.U4CSE19016 - Gowtham Vegi - About, Reviews<br>
+  CB.EN.U4CSE19018 - Sreshta - Doctors, Technology<br>
+  CB.EN.U4CSE19020 - Ashish G - Location, Medicine<br>
+  <br><hr>
+  © All rights reserved by Modern Eye Care . Designed and Developed by Team 4.
+  <br>
+
+</div>
+
+
+</body>
+
+
+</html> 
